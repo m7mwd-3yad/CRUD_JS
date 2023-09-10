@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>crud</h2>
+            <p>product managment system</p>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+            <span class="spanTitle">You Must Enter Title</span>
+            <!-- <div class="price">
+                <div>
+                    <input onkeyup="getTotal()" type="number" id="price" placeholder="Price">
+                    <span class="spanTitle">You Must Enter Title</span>
+                </div>
+                <div>
+                    <input onkeyup="getTotal()" type="number" id="tax" placeholder="Tax %">
+                    <span class="spanTitle">You Must Enter Title</span>
+                </div>
+                <div>
+                    <input onkeyup="getTotal()" type="number" id="dicount" placeholder="Discount">
+                    <span class="spanTitle">You Must Enter Title</span>
+                </div>
+                <div>
+                    <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads">
+                    <span class="spanTitle">You Must Enter Title</span>
+                </div>
+                <div>
+                    <small id="total"></small>
+                </div> -->
+            <div class="price">
+                <input onkeyup="getTotal()"  type="number" id="price" placeholder="Price">
+                <span class="spanPrice">You Must Enter Price</span>
+                <input onkeyup="getTotal()" type="number" id="tax" placeholder="Tax %">
+                <span class="spanTax">You Must Enter Tax</span>
+                <input onkeyup="getTotal()" type="number" id="dicount" placeholder="Discount">
+                <span class="spanDiscount">You Must Enter Discount</span>
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads">
+                <span class="spanAds">You Must Enter Ads</span>
+                <small id="total"></small>
+            </div>
+
+            <input type="number" id="count" placeholder="Count">
+            <span class="spanCount">You Must Enter Count</span>
+            <input type="text" id="Category" placeholder="Category">
+            <span class="spanCategory">You Must Enter Category</span>
+            <button id="submit">Create</button>
+        </div>
+        <div class="outputs">
+            <!-- <div class="seaech">
+                <input type="search" id="search" placeholder="Search">
+                <div class="btnsearch">
+                    <button onclick="getsearchmood(this.id)" id="searchTitle">Search By Title</button>
+                    <button onclick="getsearchmood(this.id)" id="searchCategory">Search By Category</button>
+                </div>
+            </div> -->
+            <h2>List Of Pruducts</h2>
+            <button id="deleteAll">Delete All</button>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Tax %</th>
+                            <th>Discount</th>
+                            <th>Ads</th>
+                            <th>Total</th>
+                            <th>Category</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
