@@ -42,7 +42,7 @@ let getTotal = () => {
 
     if (price.value != '') {
         let netTax = +price.value * (+tax.value / 100);
-        let totall = +price.value - +dicount.value - +ads.value - +netTax;
+        let totall = +price.value - +dicount.value - +ads.value + +netTax;
         total.innerHTML = Math.ceil(totall);
         total.style.background = 'green';
     } else {
