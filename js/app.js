@@ -23,7 +23,7 @@ let spanCount = document.querySelector('.spanCount');
 let spanCategory = document.querySelector('.spanCategory');
 let span = document.querySelectorAll('span');
 let inputs = document.querySelectorAll('input');
-let inputPrices = document.querySelectorAll('.price input');
+let inputTotla = document.querySelectorAll('.price input');
 //
 let mood = 'Create';
 let tmp;
@@ -73,6 +73,16 @@ let creatObject = () => {
 
     ///////////////////////////////////////////////////
 
+
+for(let i = 0 ; i<inputs.length;i++){
+    inputs[i].addEventListener('keyup',function(){
+        console.log('Hello world');
+    })
+}
+
+
+
+
     if (newPruduct.title.trim() == '') {
         spanTitle.style.display = 'block';
         title.classList.add('inputss')
@@ -96,184 +106,10 @@ let creatObject = () => {
             count.style.display = 'block';
             submit.style.background = '  #470053';
         }
-        for (let i = 1; i < span.length; i++) {
-            span[i].style.display = 'none';
-        }
         renderData();
         localStorage.setItem('Products', JSON.stringify(Products))
         clearInput();
     }
-
-    //////////////////////////////////////////////////////////
-
-
-
-
-    if (newPruduct.price.trim() == '') {
-        spanPrice.style.display = 'block';
-        price.classList.add('inputss')
-    } else {
-        price.classList.remove('inputss')
-        spanPrice.style.display = 'none';
-        if (mood === 'Create') {
-            count.style.display = 'block';
-            if (count.value == 1) {
-                Products.push(newPruduct);
-            } else {
-
-                for (let i = 1; i <= count.value; i++) {
-                    Products.push(newPruduct);
-                }
-            }
-        } else {
-            Products[tmp] = newPruduct;
-            mood = 'Create';
-            submit.innerHTML = 'Create'
-            count.style.display = 'block';
-            submit.style.background = '  #470053';
-        }
-        for (let i = 1; i < span.length; i++) {
-            span[i].style.display = 'none';
-        }
-        renderData();
-        localStorage.setItem('Products', JSON.stringify(Products))
-        clearInput();
-    }
-
-    ///////////////////////////////////////////
-
-    if (newPruduct.tax.trim() == '') {
-        spanTax.style.display = 'block';
-        tax.classList.add('inputss')
-    } else {
-        tax.classList.remove('inputss')
-        spanTax.style.display = 'none';
-        if (mood === 'Create') {
-            count.style.display = 'block';
-            if (count.value == 1) {
-                Products.push(newPruduct);
-            } else {
-
-                for (let i = 1; i <= count.value; i++) {
-                    Products.push(newPruduct);
-                }
-            }
-        } else {
-            Products[tmp] = newPruduct;
-            mood = 'Create';
-            submit.innerHTML = 'Create'
-            count.style.display = 'block';
-            submit.style.background = '  #470053';
-        }
-        for (let i = 1; i < span.length; i++) {
-            span[i].style.display = 'none';
-        }
-        renderData();
-        localStorage.setItem('Products', JSON.stringify(Products))
-        clearInput();
-    }
-
-
-    ///////////////////////////////////////////
-
-    if (newPruduct.dicount.trim() == '') {
-        spanDiscount.style.display = 'block';
-        dicount.classList.add('inputss')
-    } else {
-        dicount.classList.remove('inputss')
-        spanDiscount.style.display = 'none';
-        if (mood === 'Create') {
-            count.style.display = 'block';
-            if (count.value == 1) {
-                Products.push(newPruduct);
-            } else {
-
-                for (let i = 1; i <= count.value; i++) {
-                    Products.push(newPruduct);
-                }
-            }
-        } else {
-            Products[tmp] = newPruduct;
-            mood = 'Create';
-            submit.innerHTML = 'Create'
-            count.style.display = 'block';
-            submit.style.background = '  #470053';
-        }
-        for (let i = 1; i < span.length; i++) {
-            span[i].style.display = 'none';
-        }
-        renderData();
-        localStorage.setItem('Products', JSON.stringify(Products))
-        clearInput();
-    }
-
-    //////////////////////////////////////////////////////////
-
-    if (newPruduct.count.trim() == '') {
-        spanCount.style.display = 'block';
-        count.classList.add('inputss')
-    } else {
-        count.classList.remove('inputss')
-        spanCount.style.display = 'none';
-        if (mood === 'Create') {
-            count.style.display = 'block';
-            if (count.value == 1) {
-                Products.push(newPruduct);
-            } else {
-
-                for (let i = 1; i <= count.value; i++) {
-                    Products.push(newPruduct);
-                }
-            }
-        } else {
-            Products[tmp] = newPruduct;
-            mood = 'Create';
-            submit.innerHTML = 'Create'
-            count.style.display = 'block';
-            submit.style.background = '  #470053';
-        }
-        for (let i = 1; i < span.length; i++) {
-            span[i].style.display = 'none';
-        }
-        renderData();
-        localStorage.setItem('Products', JSON.stringify(Products))
-        clearInput();
-    }
-
-    //////////////////////////////////////////////////////////
-
-    if (newPruduct.count.trim() == '') {
-        spanCategory.style.display = 'block';
-        category.classList.add('inputss')
-    } else {
-        category.classList.remove('inputss')
-        spanCategory.style.display = 'none';
-        if (mood === 'Create') {
-            count.style.display = 'block';
-            if (count.value == 1) {
-                Products.push(newPruduct);
-            } else {
-
-                for (let i = 1; i <= count.value; i++) {
-                    Products.push(newPruduct);
-                }
-            }
-        } else {
-            Products[tmp] = newPruduct;
-            mood = 'Create';
-            submit.innerHTML = 'Create'
-            count.style.display = 'block';
-            submit.style.background = '  #470053';
-        }
-        for (let i = 1; i < span.length; i++) {
-            span[i].style.display = 'none';
-        }
-        renderData();
-        localStorage.setItem('Products', JSON.stringify(Products))
-        clearInput();
-    }
-
-    //////////////////////////////////////////////////////////
 
     // renderData();
     // localStorage.setItem('Products', JSON.stringify(Products))
@@ -305,16 +141,17 @@ let renderData = () => {
         table +=
             `
          <tr>
-            <td> ${i+1}</td>
-            <td>  ${Products[i].title}</td>
-            <td>${Products[i].price}</td>
-            <td>${Products[i].tax} %</td>
-            <td>${Products[i].dicount}</td>
-            <td>${Products[i].ads}</td>
-            <td>${Products[i].total}</td>
-            <td>${Products[i].category}</td>
-            <td><button onclick='updateData(${i}) ' id="Update">Update</button></td>
-            <td><button onclick='deleteData(${i})' id="Delete">Delete</button></td>
+            <td data-title='ID'>  ${i+1}</td>
+            <td  data-title='TITLE'>  ${Products[i].title}</td>
+            <td  data-title='PRICE'>${Products[i].price}</td>
+            <td  data-title='TAX %	'>${Products[i].tax} %</td>
+            <td  data-title='DISCOUNT'>${Products[i].dicount}</td>
+            <td  data-title='ADS'>${Products[i].ads}</td>
+            <td  data-title='TOTAL'>${Products[i].total}</td>
+            <td  data-title='CATEGORY	'>${Products[i].category}</td>
+            <td  data-title='UPDATE'><button onclick='updateData(${i}) ' id="Update">Update</button></td>
+            <td  data-title='DELETE'><button onclick='deleteData(${i})' id="Delete">Delete</button></td>
+            
          </tr>
          `
     }

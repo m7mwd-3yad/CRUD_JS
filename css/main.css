@@ -102,19 +102,21 @@ th {
 
 .update {
     content: 'Update';
+    margin-top: 2px;
 }
 
 h2 {
     text-align: center;
     margin: 10px 0 10px 0;
 }
-span{
+
+span {
     color: red;
     font-size: 10px;
     display: none;
 }
 
-.inputss{
+.inputss {
     box-shadow: 0 0 10px red;
     outline: 1px solid red;
 }
@@ -122,21 +124,43 @@ span{
 @media (max-width: 600px) {
 
     td {
-   
-        overflow-x:auto;
-     
+        display: block;
+        text-align: right;
+        /* margin-bottom: 2px; */
     }
-    th{
-     
-        overflow-x:auto;
-        
+
+    th {
+
+        display: none;
+
     }
-    td::before{
-        content: attr(data-cell);
+
+    td::before {
+        content: attr(data-title) ' :            ';
+        float: left;
+        text-align: left;
+        font-weight: bold;
+
     }
+
     .price input {
         width: 100%;
     }
 
- 
+    #Update,
+    #Delete {
+        width: 20%;
+        margin: 0px 0;
+    }
+    #Delete{
+        margin-bottom: 10px;
+    }
+    tbody tr:nth-child(even) {
+        background-color: #2f3333;
+        color: white;
+    }
+
+    table {
+        border: 1px solid #40acb1;
+    }
 }
