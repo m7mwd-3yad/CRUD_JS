@@ -85,7 +85,8 @@ for(let i = 0 ; i<inputs.length;i++){
 
     if (newPruduct.title.trim() == '') {
         spanTitle.style.display = 'block';
-        title.classList.add('inputss')
+        title.classList.add('inputss');
+        title.focus();
     } else {
         title.classList.remove('inputss')
         spanTitle.style.display = 'none';
